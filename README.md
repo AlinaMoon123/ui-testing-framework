@@ -31,9 +31,9 @@ TextInput input = TextInput.byAttribute("data-qa", "search-input");
 
 ```java
 public class LoginPage extends BasePage {
-    public TextInput username = TextInput.byId("username");
-    public TextInput password = TextInput.byId("password");
-    public Button loginBtn = Button.byText("Войти");
+    private final TextInput username = TextInput.byId("username");
+    private final TextInput password = TextInput.byId("password");
+    private final Button loginBtn = Button.byText("Войти");
 
     public LoginPage() {
         super("https://example.com/login", "//form[@id='login-form']");
